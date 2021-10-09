@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
 import questionJSON from "../../assets/questionnaire.json"
 
 class QuestionnaireView extends Component{
@@ -45,6 +44,8 @@ class QuestionnaireView extends Component{
                 return <input type="date" name={item.linkId} onChange={(e) => this.onInputChange(e, item.linkId)}/>
             case 'string':
                 return <input type="text" name={item.linkId} onChange={(e) => this.onInputChange(e, item.linkId)}/>
+            default:
+            return null;
         }
     }
     onInputChange(e, id){

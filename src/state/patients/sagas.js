@@ -39,6 +39,7 @@ function filterResults(res){
         if (a.resource.name[0].family < b.resource.name[0].family) return -1;
         if (a.resource.birthDate > b.resource.birthDate) return 1; // then sort by birth date value
         if (a.resource.birthDate < b.resource.birthDate) return -1;
+        else return 0;
     })
     return filteredResults
 
