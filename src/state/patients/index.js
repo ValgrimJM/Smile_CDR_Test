@@ -1,0 +1,1 @@
+export { default as patients } from './reducers';
